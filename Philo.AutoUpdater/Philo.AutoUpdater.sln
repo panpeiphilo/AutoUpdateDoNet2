@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdateClient", "UpdateClient\UpdateClient.csproj", "{04C616AF-A657-49BF-9EAE-3A818CA758E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdateServer", "UpdateServer\UpdateServer.csproj", "{AC28CE0B-6661-4CF4-941B-E86E1CD5011B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Philo.Common", "Philo.Common\Philo.Common.csproj", "{81CC31F3-6689-4A9D-A306-AF5982F7BC78}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{E6283AB0-BC73-46BD-8E0D-43B01C2B2D85}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04C616AF-A657-49BF-9EAE-3A818CA758E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04C616AF-A657-49BF-9EAE-3A818CA758E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04C616AF-A657-49BF-9EAE-3A818CA758E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04C616AF-A657-49BF-9EAE-3A818CA758E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC28CE0B-6661-4CF4-941B-E86E1CD5011B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC28CE0B-6661-4CF4-941B-E86E1CD5011B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC28CE0B-6661-4CF4-941B-E86E1CD5011B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC28CE0B-6661-4CF4-941B-E86E1CD5011B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81CC31F3-6689-4A9D-A306-AF5982F7BC78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81CC31F3-6689-4A9D-A306-AF5982F7BC78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81CC31F3-6689-4A9D-A306-AF5982F7BC78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81CC31F3-6689-4A9D-A306-AF5982F7BC78}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{81CC31F3-6689-4A9D-A306-AF5982F7BC78} = {E6283AB0-BC73-46BD-8E0D-43B01C2B2D85}
+	EndGlobalSection
+EndGlobal

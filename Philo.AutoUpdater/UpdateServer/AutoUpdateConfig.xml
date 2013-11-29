@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+  <CurrentVersion>1.0.0.1</CurrentVersion>
+  <FileUrl>http://localhost:63333/FileDownLoad.ashx</FileUrl>
+  <VersionList>
+    <VersionInfo>
+      <Version MajorPart="1" MinorPart="0" PrivatePart="0" BuildPart="1">1.0.0.1</Version>
+      <BuildDate>2013-02-01</BuildDate>
+      <UpdateLog>
+        1.正式发行版
+      </UpdateLog>
+    </VersionInfo>
+    <VersionInfo>
+      <Version MajorPart="0" MinorPart="1" PrivatePart="0" BuildPart="2">0.1.0.2</Version>
+      <BuildDate>2013-01-05</BuildDate>
+      <UpdateLog>
+        1.发行版的预览版
+      </UpdateLog>
+    </VersionInfo>
+    <VersionInfo>
+      <Version MajorPart="0" MinorPart="0" PrivatePart="0" BuildPart="2">0.0.0.2</Version>
+      <BuildDate>2013-01-05</BuildDate>
+      <UpdateLog>
+        1.调整部分Kata Bug <br />
+        2.引入各种类库
+      </UpdateLog>
+    </VersionInfo>
+      <VersionInfo>
+      <Version MajorPart="0" MinorPart="0" PrivatePart="0" BuildPart="1">0.0.0.1</Version>
+      <BuildDate>2013-01-01</BuildDate>
+      <UpdateLog>
+        1.初始建立版本
+       
+      </UpdateLog>
+    </VersionInfo>
+  </VersionList>
+  <IgnoreFileList>
+    <IgnoreFile Path="/" FileName="Philo.Common.dll"></IgnoreFile>
+    <IgnoreFile Path="/" FileName="Philo.Common.pdb"></IgnoreFile>
+    <IgnoreFile Path="/" FileName="UpdateClient.exe"></IgnoreFile>
+    <IgnoreFile Path="/" FileName="UpdateClient.pdb"></IgnoreFile>
+    <IgnoreFile Path="/" FileName="UpdateClient.exe.config"></IgnoreFile>
+    <IgnoreFile Path="/" FileName="UpdateClient.vshost.exe"></IgnoreFile>
+    <IgnoreFile Path="/" FileName="UpdateClient.vshost.exe.config"></IgnoreFile>
+  </IgnoreFileList>
+</Root>

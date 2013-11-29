@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="TestConnection">
+        <s:complexType />
+      </s:element>
+      <s:element name="TestConnectionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TestConnectionResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServerVersion">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetServerVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServerVersionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUpdateLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clientVersion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUpdateLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUpdateLogResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIgnoreFileList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetIgnoreFileListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIgnoreFileListResult" type="tns:ArrayOfFileEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfFileEntity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FileEntity" nillable="true" type="tns:FileEntity" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FileEntity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FilePath" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FileVersion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FileSize" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="UpdateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="HashCode" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsExist" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetServerFileList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetServerFileListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServerFileListResult" type="tns:ArrayOfFileEntity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDownLoadLink">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDownLoadLinkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDownLoadLinkResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="TestConnectionSoapIn">
+    <wsdl:part name="parameters" element="tns:TestConnection" />
+  </wsdl:message>
+  <wsdl:message name="TestConnectionSoapOut">
+    <wsdl:part name="parameters" element="tns:TestConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetServerVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServerVersion" />
+  </wsdl:message>
+  <wsdl:message name="GetServerVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServerVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUpdateLogSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUpdateLog" />
+  </wsdl:message>
+  <wsdl:message name="GetUpdateLogSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUpdateLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIgnoreFileListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIgnoreFileList" />
+  </wsdl:message>
+  <wsdl:message name="GetIgnoreFileListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIgnoreFileListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetServerFileListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServerFileList" />
+  </wsdl:message>
+  <wsdl:message name="GetServerFileListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServerFileListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDownLoadLinkSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDownLoadLink" />
+  </wsdl:message>
+  <wsdl:message name="GetDownLoadLinkSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDownLoadLinkResponse" />
+  </wsdl:message>
+  <wsdl:portType name="UpdateSvcSoap">
+    <wsdl:operation name="TestConnection">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">测试服务器连接</wsdl:documentation>
+      <wsdl:input message="tns:TestConnectionSoapIn" />
+      <wsdl:output message="tns:TestConnectionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServerVersion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取服务器版本号</wsdl:documentation>
+      <wsdl:input message="tns:GetServerVersionSoapIn" />
+      <wsdl:output message="tns:GetServerVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateLog">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取更新日志</wsdl:documentation>
+      <wsdl:input message="tns:GetUpdateLogSoapIn" />
+      <wsdl:output message="tns:GetUpdateLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIgnoreFileList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取不需更新的文件</wsdl:documentation>
+      <wsdl:input message="tns:GetIgnoreFileListSoapIn" />
+      <wsdl:output message="tns:GetIgnoreFileListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServerFileList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取服务器文件列表</wsdl:documentation>
+      <wsdl:input message="tns:GetServerFileListSoapIn" />
+      <wsdl:output message="tns:GetServerFileListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDownLoadLink">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取下载地址链接</wsdl:documentation>
+      <wsdl:input message="tns:GetDownLoadLinkSoapIn" />
+      <wsdl:output message="tns:GetDownLoadLinkSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UpdateSvcSoap" type="tns:UpdateSvcSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TestConnection">
+      <soap:operation soapAction="http://tempuri.org/TestConnection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerVersion">
+      <soap:operation soapAction="http://tempuri.org/GetServerVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateLog">
+      <soap:operation soapAction="http://tempuri.org/GetUpdateLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIgnoreFileList">
+      <soap:operation soapAction="http://tempuri.org/GetIgnoreFileList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerFileList">
+      <soap:operation soapAction="http://tempuri.org/GetServerFileList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDownLoadLink">
+      <soap:operation soapAction="http://tempuri.org/GetDownLoadLink" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="UpdateSvcSoap12" type="tns:UpdateSvcSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TestConnection">
+      <soap12:operation soapAction="http://tempuri.org/TestConnection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerVersion">
+      <soap12:operation soapAction="http://tempuri.org/GetServerVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateLog">
+      <soap12:operation soapAction="http://tempuri.org/GetUpdateLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIgnoreFileList">
+      <soap12:operation soapAction="http://tempuri.org/GetIgnoreFileList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerFileList">
+      <soap12:operation soapAction="http://tempuri.org/GetServerFileList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDownLoadLink">
+      <soap12:operation soapAction="http://tempuri.org/GetDownLoadLink" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UpdateSvc">
+    <wsdl:port name="UpdateSvcSoap" binding="tns:UpdateSvcSoap">
+      <soap:address location="http://localhost:63333/UpdateSvc.asmx" />
+    </wsdl:port>
+    <wsdl:port name="UpdateSvcSoap12" binding="tns:UpdateSvcSoap12">
+      <soap12:address location="http://localhost:63333/UpdateSvc.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
